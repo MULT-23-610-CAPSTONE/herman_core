@@ -73,7 +73,7 @@ class RadiationSensorPlotter:
         # Update the measurements and plot the new data
         self.ax.clear()
         # self.ax.plot(self.channels,self.counts,linewidth=0.5)
-        self.ax.hist(self.channels,self.counts)
+        self.ax.bar(self.channels,self.counts)
         self.ax.set_xlabel('Energy (keV)', fontsize=15)
         self.ax.set_ylabel('Counts', fontsize=15)
         self.ax.set_title('Radiation Counts', fontsize=18)
