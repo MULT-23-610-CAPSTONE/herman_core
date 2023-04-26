@@ -60,6 +60,8 @@ class RadiationSensorPlotter:
 
     def radiation_sensor_callback(self, msg):
         # Split the string into a list of measurements
+        self.channels = []
+        self.counts = []
         measurements = msg.data.split("%")
         for i in range(0, len(measurements) - 1):
             single_data =  measurements[i].split("#")
