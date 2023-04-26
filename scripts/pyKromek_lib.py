@@ -60,7 +60,7 @@ outputPrefixPadding             = 15
 
 
 # Diagnostics (when executing this file directly)
-timeup = .1/3
+timeup = .1
 
 timeup = timeup*60
 diagnostics_LiveTime_sec        = timeup 

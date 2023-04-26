@@ -67,13 +67,14 @@ class RadiationSensorPlotter:
             single_data =  measurements[i].split("#")
             # print(single_data)
             self.channels.append(float(single_data[0]))
-            self.counts.append(float(single_data[1]))
+            self.counts.append(float(single_data[1]) * 0.499)
 
 
         # Update the measurements and plot the new data
         self.ax.clear()
-        self.ax.plot(self.channels,self.counts,linewidth=0.5)
-        self.ax.set_xlabel('Channel', fontsize=15)
+        # self.ax.plot(self.channels,self.counts,linewidth=0.5)
+        self.ax.hist(self.channels,self.counts)
+        self.ax.set_xlabel('Energy (keV)', fontsize=15)
         self.ax.set_ylabel('Counts', fontsize=15)
         self.ax.set_title('Radiation Counts', fontsize=18)
 
