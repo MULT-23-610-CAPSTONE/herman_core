@@ -74,6 +74,7 @@ class RadiationSensorPlotter:
         self.ax.clear()
         # self.ax.plot(self.channels,self.counts,linewidth=0.5)
         self.ax.bar(self.channels,self.counts)
+        self.ax.set_xlim(0,2000)
         self.ax.set_xlabel('Energy (keV)', fontsize=15)
         self.ax.set_ylabel('Counts', fontsize=15)
         self.ax.set_title('Radiation Counts', fontsize=18)
