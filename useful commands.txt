@@ -1,0 +1,18 @@
+camera launch:
+roslaunch realsense2_camera rs_t265.launch
+
+lidar launch:
+ls -l /dev |grep ttyUSB
+sudo chmod 666 /dev/ttyUSB0
+roslaunch rplidar_ros view_rplidar.launch
+
+alias sws='source devel/setup.bash'
+alias sbash='source ~/.bashrc'
+alias cbash='code ~/.bashrc'
+alias reload='sudo udevadm control --reload-rules'
+alias trigger='sudo udevadm trigger'
+source /opt/ros/melodic/setup.bash
+export TURTLEBOT3_MODEL=burger
+export ROS_IP=10.0.2.1
+# export ROS_MASTER_URI=http://10.0.2.1:11311/
+export ROS_MASTER_URI=http://10.0.255.108:11311/

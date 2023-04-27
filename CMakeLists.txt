@@ -162,6 +162,7 @@ include_directories(
 catkin_install_python(PROGRAMS
   scripts/radiation_sensor.py
   scripts/plot_radiation_data.py
+  scripts/tf_laser.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
